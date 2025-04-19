@@ -1,0 +1,99 @@
+import { useState } from "react";
+import LanguageSwitcher from "./dropdownLag";
+import { useTranslation } from "react-i18next";
+
+export function Navbar() {
+  const { t } = useTranslation<"nav">();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <header className="shadow-md fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between ">
+        {!isOpen && (
+          <div>
+            <img className="h-12" src="./logo.png" alt="logo" />
+          </div>
+        )}
+        <div className="flex items-center cursor-pointer ">
+          <nav className="hidden md:flex space-x-8 uppercase pr-8 text-white">
+            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+              {/* {t("about")} */} demo
+            </a>
+            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+              {/* {t("game")} */} demo
+            </a>
+            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+              {/* {t("partners")} */} demo
+            </a>
+            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+              {/* {t("contact")} */} demo
+            </a>
+          </nav>
+
+          <LanguageSwitcher />
+        </div>
+
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pb-4 space-y-2">
+          <a href="#" className="block text-gray-700 hover:text-blue-600">
+            Home
+          </a>
+          <a href="#" className="block text-gray-700 hover:text-blue-600">
+            About
+          </a>
+          <a href="#" className="block text-gray-700 hover:text-blue-600">
+            Services
+          </a>
+          <a href="#" className="block text-gray-700 hover:text-blue-600">
+            Contact
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
