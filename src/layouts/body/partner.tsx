@@ -19,9 +19,9 @@ export function PartnerSlider() {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="bg-[#F6F6F6] py-16 relative">
-      <h2 className="text-5xl font-semibold text-center mb-14">Our Partners</h2>
-      <div className="max-w-6xl mx-auto px-4 relative">
+    <div className="bg-[#F6F6F6] py-8 md:py-16 relative">
+      <h2 className="text-3xl md:text-5xl font-semibold text-center mb-6 md:mb-14">Our Partners</h2>
+      <div className="max-w-6xl md:max-w-4xl xl:max-w-6xl mx-4 md:mx-auto px-4 relative">
         <button
           ref={prevRef}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-1 bg-white rounded-lg  hover:bg-gray-100 transition shadow-md"
@@ -86,7 +86,7 @@ export function PartnerSlider() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-20 object-contain transition duration-300"
+                className="h-full object-contain transition duration-300"
               />
             </SwiperSlide>
           ))}
