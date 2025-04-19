@@ -1,89 +1,85 @@
-import { GameGrid2 } from "./gameGrid2";
-import { GameGridItem, GameItem } from "./gameGridItem";
+import { GameGridComponent } from "./gameGrid";
+export interface GameItem {
+  title: string;
+  image: string;
+  description: string;
+}
 
 export function GameGrid() {
   const games: GameItem[] = [
     {
-      title: "Game 1",
+      title: "E-Space",
       image: "./images/gridGame/1.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 2",
+      title: "Kingland",
       image: "./images/gridGame/2.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 3",
+      title: "The Last Game",
       image: "./images/gridGame/3.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 4",
+      title: "G-Dragon",
       image: "./images/gridGame/4.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 5",
+      title: "Pirates",
       image: "./images/gridGame/5.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 6",
+      title: "Witch Party",
       image: "./images/gridGame/6.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 7",
+      title: "Rocky",
       image: "./images/gridGame/7.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 8",
+      title: "Blue Fire",
       image: "./images/gridGame/8.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 9",
+      title: "Magic tree",
       image: "./images/gridGame/9.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 10",
+      title: "Aborigines",
       image: "./images/gridGame/10.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 11",
+      title: "Cinderella",
       image: "./images/gridGame/11.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
     {
-      title: "Game 12",
+      title: "Egypt Game",
       image: "./images/gridGame/12.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum totam nihil consectetur quibusdam",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inobcaecati praesentium porro quasi voluptates nostrum earum",
     },
   ];
-  const columns = 4;
 
-  // Chia game vào từng cột
-  const columnsArray = Array.from({ length: columns }, () => [] as GameItem[]);
-
-  games.forEach((game, index) => {
-    columnsArray[index % columns].push(game);
-  });
-
-  return <GameGrid2 games={games} />;
+  return <GameGridComponent games={games} />;
 }
