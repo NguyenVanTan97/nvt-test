@@ -16,8 +16,8 @@ export function Navbar() {
             <img className="h-12" src="./logo.png" alt="logo" />
           </div>
         )}
-        <div className="flex items-center cursor-pointer ">
-          <nav className="hidden md:flex space-x-8 uppercase pr-8 text-white">
+        <div className="flex items-center cursor-pointer hidden md:flex">
+          <nav className=" space-x-8 uppercase pr-8 text-white">
             <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("about")} */} demo
             </a>
@@ -38,58 +38,66 @@ export function Navbar() {
         <button
           className="md:hidden focus:outline-none"
           onClick={toggleMenu}
-          aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
+          <svg
+            className="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </button>
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out absolute top-0 left-0 right-0 z-50 h-32 bg-white ${
+          isOpen ? "h-60 opacity-100" : "h-0 opacity-0"
         }`}
       >
         <div className="px-4 pb-4 space-y-2">
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            Home
-          </a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            About
-          </a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            Services
-          </a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">
-            Contact
-          </a>
+          <div className="flex items-center justify-between mx-4 mt-3">
+            <LanguageSwitcher />
+
+            <button
+              className="md:hidden focus:outline-none"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+              Home
+            </a>
+            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+              About
+            </a>
+            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+              Services
+            </a>
+            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </header>

@@ -30,11 +30,16 @@ const LanguageSwitcher = () => {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1 px-3 py-1.5 border-none "
+        className="inline-flex items-center gap-1 px-3 py-1.5 border border-gray-300 rounded-md  md:border-none "
       >
-        <img className="h-7" src={LANGUAGES.find((lang) => lang.code === selected)?.flag} />
+        <img
+          className="h-7"
+          src={LANGUAGES.find((lang) => lang.code === selected)?.flag}
+        />
         <svg
-          className="w-4 h-4 text-white"
+          className={`w-4 h-4 text-gray-700 md:text-white transition-transform duration-500 ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
@@ -49,7 +54,7 @@ const LanguageSwitcher = () => {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+        <div className="absolute left-0 md:right-0 mt-2 w-44 bg-white border border-gray-200 rounded-md shadow-lg z-50">
           {LANGUAGES.map((lang) => (
             <button
               key={lang.code}
