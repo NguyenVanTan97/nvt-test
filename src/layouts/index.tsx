@@ -1,3 +1,4 @@
+import { Body } from "./body";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import Navbar from "./nav";
@@ -7,6 +8,7 @@ export function Layout() {
     <div>
       <Navbar />
       <Header />
+      <Body />
       <Footer />
     </div>
   );

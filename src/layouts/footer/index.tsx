@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer>
       <div
-        className="h-screen md:h-80 md:w-full bg-cover bg-center relative  "
+        className="h-screen lg:h-[400px] xl:h-80 md:w-full bg-cover bg-center relative  "
         style={{
           backgroundImage: `
             url('./images/bg-footer.jpg'),
@@ -61,7 +61,7 @@ export function Footer() {
                     className="py-3 px-4 w-full focus:outline-none bg-transparent text-white"
                   />
                   <button className=" text-white rounded-r-md px-5 text-xl">
-                    <img  src="./icons/arrow-right.png" alt="" />
+                    <img src="./icons/arrow-right.png" alt="" />
                   </button>
                 </div>
               </div>
