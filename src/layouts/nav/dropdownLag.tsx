@@ -30,7 +30,7 @@ const LanguageSwitcher = () => {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1 px-3 py-1.5 border border-gray-300 rounded-md  md:border-none "
+        className="inline-flex items-center gap-1 px-3 py-1 border border-gray-300 rounded-md  md:border-none "
       >
         <img
           className="h-7"

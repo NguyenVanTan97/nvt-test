@@ -35,12 +35,9 @@ export function Navbar() {
           <LanguageSwitcher />
         </div>
 
-        <button
-          className="md:hidden focus:outline-none"
-          onClick={toggleMenu}
-        >
+        <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
           <svg
-            className="w-6 h-6 text-white"
+            className="w-7 h-7 text-white"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -56,11 +53,11 @@ export function Navbar() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out absolute top-0 left-0 right-0 z-50 h-32 bg-white ${
-          isOpen ? "h-60 opacity-100" : "h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out absolute top-0 left-0 shadow-sm right-0 z-50 h-32 bg-white ${
+          isOpen ? "h-screen opacity-100" : "h-0 opacity-0"
         }`}
       >
-        <div className="px-4 pb-4 space-y-2">
+        <div className="px-3 pt-2 space-y-2">
           <div className="flex items-center justify-between mx-4 mt-3">
             <LanguageSwitcher />
 
@@ -70,7 +67,7 @@ export function Navbar() {
               aria-label="Toggle menu"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -84,17 +81,26 @@ export function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+          <div className="flex flex-col justify-center items-center font-semibold uppercase">
+            <a
+              href="#"
+              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+            >
               Home
             </a>
-            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+            <a
+              href="#"
+              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+            >
               About
             </a>
-            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+            <a
+              href="#"
+              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+            >
               Services
             </a>
-            <a href="#" className="block text-gray-700 p-2 hover:text-blue-600">
+            <a href="#" className="block text-gray-700 p-4 w-full text-center">
               Contact
             </a>
           </div>
