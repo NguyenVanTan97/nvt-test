@@ -1,3 +1,4 @@
+import { GameGrid } from "./gameGrid";
 import { Header } from "./header";
 import PartnerSlider from "./partner";
 
@@ -6,6 +7,7 @@ export function Home() {
     <div>
       <Header />
 
+      <GameGrid />
       <PartnerSlider />
     </div>
   );
