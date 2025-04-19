@@ -51,7 +51,10 @@ export function About() {
         </div>
       </div>
 
-      <div>image</div>
+      <div className="relative h-72 md:h-[500px] flex justify-center items-end mt-10">
+        <img src="./images/co-tien.png" alt="co tien" className="h-[50%] w-auto absolute left-1/2 top-0 -translate-x-1/2 animate-wiggle" />
+        <img src="./images/map.png" alt="map" className="h-[62%] md:h-[65%] w-auto" />
+      </div>
     </div>
   );
 }
