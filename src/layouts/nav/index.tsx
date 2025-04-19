@@ -11,12 +11,11 @@ export function Navbar() {
   return (
     <header className="shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between ">
-        {!isOpen && (
-          <div>
-            <img className="h-12" src="./logo.png" alt="logo" />
-          </div>
-        )}
-        <div className="flex items-center cursor-pointer hidden md:flex">
+        <div>
+          <img className="h-8 md:h-12" src="./logo.png" alt="logo" />
+        </div>
+
+        <div className="items-center cursor-pointer hidden md:flex">
           <nav className=" space-x-8 uppercase pr-8 text-white">
             <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("about")} */} demo
