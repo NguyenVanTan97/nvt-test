@@ -1,14 +1,13 @@
-import { Body } from "./body";
+import { PropsWithChildren } from "react";
 import { Footer } from "./footer";
-import { Header } from "./header";
+import { Header } from "../pages/Home/header";
 import Navbar from "./nav";
 
-export function Layout() {
+export function Layout(props: PropsWithChildren<{}>) {
   return (
     <div>
       <Navbar />
-      <Header />
-      <Body />
+      {props.children}
       <Footer />
     </div>
   );
