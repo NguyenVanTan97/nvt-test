@@ -11,9 +11,9 @@ export function Footer() {
             `,
         }}
       >
-        <div className="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-gradient-to-b to-black from-blue-800 opacity-90 px-10 md:px-36 pt-16  ">
+        <div className="absolute top-0 bottom-0 right-0 left-0 inset-0 bg-gradient-to-b to-black from-blue-800 opacity-90 px-10 md:px-36 pt-0 md:pt-16 ">
           <div className="grid grid-col-1 md:grid-cols-5 h-full  text-white ">
-            <div className="col-span-1 md:col-span-2 flex flex-col  items-center md:items-start">
+            <div className="col-span-1 md:col-span-2 flex flex-col justify-center md:justify-start items-center md:items-start">
               <div>
                 <img className="h-24" src="./logo.png" alt="" />
               </div>
