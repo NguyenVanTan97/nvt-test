@@ -1,12 +1,16 @@
 import "./App.css";
 import { Layout } from "./layouts";
 import BackToTopButton from "./layouts/backToTop";
-import { Home } from "./pages/Home";
+import { GameGrid } from "./pages/games";
+import { Header } from "./pages/Header/header";
+import PartnerSlider from "./pages/Partner/partner";
 
 function App() {
   return (
     <Layout>
-      <Home />
+      <Header />
+      <GameGrid />
+      <PartnerSlider />
       <BackToTopButton />
     </Layout>
   );

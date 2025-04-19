@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Footer } from "./footer";
-import { Header } from "../pages/Home/header";
+import { Header } from "../pages/Header/header";
 import Navbar from "./nav";
 
 export function Layout(props: PropsWithChildren<{}>) {

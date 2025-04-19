@@ -17,8 +17,8 @@ export function GameGridComponent({ games }: { games: GameItem[] }) {
 
   return (
     <div className=" px-4 max-w-7xl mx-auto py-14">
-      <div className="flex flex-col justify-center items-center pb-10 gap-4 px-32">
-        <h1 className="text-6xl font-bold">Our Games</h1>
+      <div className="flex flex-col justify-center items-center pb-10 gap-4 px-6 md:px-32">
+        <h1 className="text-4xl md:text-6xl font-bold">Our Games</h1>
         <span className="text-center text-sm text-gray-500">
           As a pioneer of mobile app gamification, we take pride in originality
           and individuality, providing global players with state-of-the-art
