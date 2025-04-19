@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LanguageSwitcher from "./dropdownLag";
 import { useTranslation } from "react-i18next";
 
 export function Navbar() {
   const { t } = useTranslation<"nav">();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrollClass, setIsScrollClass] = useState<string>("");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrollClass(window.scrollY > 300 ? " shadow-md bg-slate-800/40" : "");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500  ` + isScrollClass}
+    >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between ">
         <div>
           <img className="h-8 md:h-12" src="./logo.png" alt="logo" />
