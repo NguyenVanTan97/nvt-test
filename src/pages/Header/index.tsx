@@ -9,7 +9,7 @@ export function Header() {
   return (
     <div>
       <div className="relative">
-        <div className="backdrop-blur-sm bg-[radial-gradient(circle,_rgba(168,85,247,0.5)_0%,_rgba(168,85,247,0.4)_15%,_rgba(168,85,247,0.3)_30%,_rgba(168,85,247,0.15)_40%,_rgba(168,85,247,0.03)_50%,_rgba(168,85,247,0)_100%)] flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  gap-y-14  text-white md:p-12 rounded-full  shadow-2xl shadow-white/5 ">
+        <div className="backdrop-blur-sm bg-[radial-gradient(circle,_rgba(168,85,247,0.5)_0%,_rgba(168,85,247,0.4)_15%,_rgba(168,85,247,0.3)_30%,_rgba(168,85,247,0.15)_40%,_rgba(168,85,247,0.03)_50%,_rgba(168,85,247,0)_100%)] flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  gap-y-14  text-white md:p-12 rounded-full  shadow-2xl shadow-white/5 z-10">
           <div className="text-center">
             <div className="font-black text-[40px] md:text-[80px] font-playfair text-center leading-tight px-4 pb-4">
               <span className="block md:inline">We're </span>
@@ -34,11 +34,18 @@ export function Header() {
             </div>
           </div>
         </div>
-        <img
-          src="./images/ong-tien.png"
-          alt=""
-          className="absolute md:-bottom-10 md:left-0 md:-translate-x-0 left-1/2 -translate-x-1/3  -bottom-72 "
-        />
+        <div className="absolute md:-bottom-10 md:left-0 md:-translate-x-0 left-1/2 -translate-x-1/3  -bottom-72 h-auto w-full md:w-auto">
+          <img
+            src="./images/ong-tien.png"
+            alt=""
+            className=" md:w-[45vw]  h-full "
+          />
+          <img
+            src="./images/bup.png"
+            alt=""
+            className="h-16  md:h-24 absolute z-20 bottom-12 right-32 xl:right-72 xl:bottom-32  animate-bounce-smooth"
+          />
+        </div>
         <img
           src="./images/BG_header.png"
           alt=""
