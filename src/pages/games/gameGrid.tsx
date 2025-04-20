@@ -22,7 +22,7 @@ export function GameGridComponent({ games }: { games: GameItem[] }) {
   return (
     <div id="game" className=" px-4 max-w-7xl mx-auto py-14">
       <div className="flex flex-col justify-center items-center pb-10 gap-4 px-6 md:px-32">
-        <h1 className="md:text-6xl font-black text-5xl font-playfair">
+        <h1 className="md:text-6xl font-black text-[40px] font-playfair">
           {t("title")}
         </h1>
         <span className="text-center text-sm text-gray-500">

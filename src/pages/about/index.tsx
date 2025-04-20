@@ -11,7 +11,7 @@ export function About() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10    ">
         <div className="px-6">
-          <h1 className="md:text-6xl font-black text-5xl font-playfair">
+          <h1 className="md:text-6xl font-black text-[40px] font-playfair">
             {t("title")}
           </h1>
           <p className="text-sm mt-8 md:mt-10 text-gray-500">{t("content")}</p>
