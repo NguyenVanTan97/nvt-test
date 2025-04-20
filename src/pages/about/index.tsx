@@ -31,7 +31,7 @@ export function About() {
           </div>
         </div>
         <div className="bg-[#EEEEEE] flex justify-center items-center">
-          <div className="flex flex-col gap-4 px-8 md:px-16 lg:px-20 py-20">
+          <div className="flex flex-col gap-4 px-8 md:px-8 lg:px-20 py-20">
             <ItemAbout
               icon="./icons/i-cal.png"
               title="24 - Hour"
