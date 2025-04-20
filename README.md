@@ -30,6 +30,21 @@ Cung cấp cho người dùng thông tin về các trò chơi của chúng tôi,
 ![Demo 2](./public/images-readme/6e.png)
 ![Demo 3](./public/images-readme/7e.png)
 ![Demo 4](./public/images-readme/8e.png)
+
+### Giao diện trên mobile:
+
+<p align="center">
+  <img src="./public/images-readme/m1.png" alt="Demo 1" width="30%" />
+  <img src="./public/images-readme/m2.png" alt="Demo 2" width="30%" />
+  <img src="./public/images-readme/m3.png" alt="Demo 2" width="30%" />
+</p>
+
+<p align="center">
+  <img src="./public/images-readme/m4.png" alt="Demo 1" width="30%" />
+  <img src="./public/images-readme/m5.png" alt="Demo 2" width="30%" />
+  <img src="./public/images-readme/m6.png" alt="Demo 2" width="30%" />
+</p>
+
 ---
 
 ## ⚙️ Cài đặt & Chạy dự án
