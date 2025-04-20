@@ -3,8 +3,8 @@ import { Layout } from "./layouts";
 import BackToTopButton from "./layouts/backToTop";
 import { About } from "./pages/about";
 import { GameGrid } from "./pages/games";
-import { Header } from "./pages/Header";
-import PartnerSlider from "./pages/Partner";
+import { Header } from "./pages/header";
+import PartnerSlider from "./pages/partner";
 
 function App() {
   return (

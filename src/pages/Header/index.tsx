@@ -1,4 +1,5 @@
-import CountdownTimer from "./dongHo";
+import CountdownTimer from "./countdown";
+
 
 export function Header() {
   const now = new Date();
@@ -8,7 +9,7 @@ export function Header() {
 
   return (
     <div className="relative">
-      <div className="min-h-screen flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+      <div className=" flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
         <CountdownTimer targetDate={targetDate} />
       </div>
       <img src="./images/BG_header.png" alt="" className="w-full h-full" />
