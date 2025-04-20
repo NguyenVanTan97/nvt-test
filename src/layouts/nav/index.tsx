@@ -12,8 +12,6 @@ export function Navbar() {
   const [isScrollClass, setIsScrollClass] = useState<string>("");
 
   const toggleMenu = () => {
-    console.log(!isOpen);
-    
     setIsOpen(!isOpen);
     setIsOpenNavMobile(!isOpen);
   };
