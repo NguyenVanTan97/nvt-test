@@ -10,8 +10,9 @@ export function Header() {
     <div className="relative">
       <div className=" flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  gap-y-14  text-white  bg-[radial-gradient(circle,_rgba(168,85,247,0.3)_0%,_rgba(168,85,247,0)_90%)] shadow-2xl shadow-white/5 md:p-12 rounded-full">
         <div className="text-center">
-          <div className="font-black text-[40px] md:text-[80px] font-playfair text-center px-4 pb-4">
-            <h1>We’re Getting Ready</h1>
+          <div className="font-black text-[40px] md:text-[80px] font-playfair text-center leading-tight px-4 pb-4">
+          <span className="block md:inline">We're </span>
+          <span className="block md:inline">Getting Ready</span>
           </div>
           <CountdownTimer targetDate={targetDate} />
         </div>
@@ -36,7 +37,7 @@ export function Header() {
       <img
         src="./images/BG_header.png"
         alt=""
-        className=" md:w-full h-[520px] w-auto object-cover md:h-full"
+        className=" md:w-full h-[520px] w-auto object-cover md:h-screen"
       />
     </div>
   );

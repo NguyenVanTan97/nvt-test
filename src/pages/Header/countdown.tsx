@@ -44,7 +44,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   ];
 
   return (
-    <div className="flex items-center justify-center gap-x-4 md:gap-x-8 py-3 md:py-6  bg-white rounded-xl ">
+    <div className="flex items-center justify-center gap-x-4 md:gap-x-8 py-3 md:py-6 px-6 md:px-0 bg-white rounded-xl ">
       {timeItems.map((item, index) => (
         <div className="flex items-center gap-x-4 md:gap-x-8 justify-center">
           <div key={index} className="text-center w-11 md:w-24">
