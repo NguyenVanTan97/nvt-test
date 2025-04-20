@@ -4,7 +4,7 @@ import BackToTopButton from "./layouts/backToTop";
 import { About } from "./pages/about";
 import { GameGrid } from "./pages/games";
 import { Contact } from "./pages/contactUs";
-import PartnerSlider from "./pages/partner";
+import PartnerSlider from "./pages/partners";
 
 function App() {
   return (
