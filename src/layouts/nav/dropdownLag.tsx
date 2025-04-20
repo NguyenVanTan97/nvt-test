@@ -17,7 +17,14 @@ const LanguageSwitcher = () => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const i18lag = localStorage.getItem("i18nextLng");
+
   useEffect(() => {
+    if (i18lag) {
+      setSelected(i18lag as Language);
+      i18n.changeLanguage(i18lag);
+    }
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
