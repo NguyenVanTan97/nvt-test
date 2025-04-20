@@ -83,7 +83,6 @@ export function ItemAbout({
       <div>
         <h1 className=" font-bold text-2xl">{title}</h1>
         <p className="text-sm mt-2 text-gray-500">{content}</p>
-        test fix deloy import 
       </div>
     </div>
   );
