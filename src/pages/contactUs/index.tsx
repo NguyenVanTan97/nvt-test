@@ -21,7 +21,7 @@ export function Contact() {
             </div>
             <CountdownTimer targetDate={targetDate} />
           </div>
-          <div className="flex flex-col items-center justify-center text-center w-[350px] md:w-96 ">
+          <div className="flex flex-col items-center justify-center text-center w-[350px] md:w-[600px] ">
             <p className="text-xs md:text-lg">{t("content")}</p>
             <div className="flex items-center bg-white text-gray-700 rounded-md mt-5 w-full">
               <input
