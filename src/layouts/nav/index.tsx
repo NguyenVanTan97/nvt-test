@@ -28,17 +28,17 @@ export function Navbar() {
         </div>
 
         <div className="items-center cursor-pointer hidden md:flex">
-          <nav className=" space-x-8 uppercase pr-8 text-white">
-            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+          <nav className="text-sm space-x-8 uppercase pr-8 text-white">
+            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("about")} */} demo
             </a>
-            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("game")} */} demo
             </a>
-            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("partners")} */} demo
             </a>
-            <a className="font-semibold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
+            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
               {/* {t("contact")} */} demo
             </a>
           </nav>
@@ -78,7 +78,7 @@ export function Navbar() {
               aria-label="Toggle menu"
             >
               <svg
-                className="w-7 h-7"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -92,27 +92,27 @@ export function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col justify-center items-center font-semibold uppercase">
+          <div className="flex flex-col justify-center items-center font-bold text-sm uppercase">
             <a
               href="#"
-              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+              className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              Home
+              About us
             </a>
             <a
               href="#"
-              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+              className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              About
+              games
             </a>
             <a
               href="#"
-              className="block text-gray-700 p-4 border-b border-gray-200 w-full text-center"
+              className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              Services
+              partners
             </a>
-            <a href="#" className="block text-gray-700 p-4 w-full text-center">
-              Contact
+            <a href="#" className="block text-gray-700 p-5 w-full text-center">
+              Contact us
             </a>
           </div>
         </div>

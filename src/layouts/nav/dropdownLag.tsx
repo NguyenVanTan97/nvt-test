@@ -63,9 +63,9 @@ const LanguageSwitcher = () => {
                 setOpen(false);
                 i18n.changeLanguage(lang.code);
               }}
-              className="flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100"
+              className="flex items-center w-full px-4 py-2 text-xs hover:bg-gray-100"
             >
-              <div className="flex flex-row">
+              <div className="flex flex-row items-center gap-x-1">
                 {selected === lang.code ? (
                   <span className="mr-2">✔</span>
                 ) : (

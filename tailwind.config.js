@@ -12,6 +12,10 @@ module.exports = {
       animation: {
         wiggle: "wiggle 6s ease-in-out infinite",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        playfair: ["Playfair Display", "Montserrat"],
+      },
     },
   },
   plugins: [],

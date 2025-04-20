@@ -25,7 +25,7 @@ export function Footer() {
             </div>
             <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h1 className="font-semibold text-xl">Địa chỉ</h1>
+                <h1 className="font-bold text-2xl">Địa chỉ</h1>
                 <div className="flex gap-2 pt-6 text-sm">
                   <img className="h-8" src="./icons/location.png" alt="" />
                   <div className="flex flex-col gap-3">
@@ -47,7 +47,7 @@ export function Footer() {
                 </div>
               </div>
               <div>
-                <h1 className="font-semibold text-xl">Theo dõi</h1>
+                <h1 className="font-bold text-2xl">Theo dõi</h1>
                 <div className="flex gap-2 pt-6 text-sm">
                   <span>
                     Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
       </div>
       <div className="flex justify-center items-center h-10 bg-black">
-        <span className="text-gray-400 ">2017 Copyright. Policy.</span>
+        <span className="text-gray-400 text-lg">2017 Copyright. Policy.</span>
       </div>
     </footer>
   );
