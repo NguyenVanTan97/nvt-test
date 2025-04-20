@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div className="flex flex-col gap-6 md:mx-[10%] xl:mx-[15%] mt-14 md:mt-24">
+    <div id="about" className="flex flex-col gap-6 md:mx-[10%] xl:mx-[15%] mt-14 md:mt-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10    ">
         <div className="px-6">
           <h1 className="md:text-6xl font-black text-5xl font-playfair">About us </h1>

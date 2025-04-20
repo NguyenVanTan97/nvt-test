@@ -1,13 +1,13 @@
 import CountdownTimer from "./countdown";
 
-export function Header() {
+export function Contact() {
   const now = new Date();
   const targetDate = new Date(
     now.getTime() + (30 * 24 * 60 * 60 + 18 * 60 * 60 + 20 * 60 + 15) * 1000
   );
 
   return (
-    <div>
+    <div id="contact">
       <div className="relative">
         <div className="backdrop-blur-sm bg-[radial-gradient(circle,_rgba(168,85,247,0.5)_0%,_rgba(168,85,247,0.4)_15%,_rgba(168,85,247,0.3)_30%,_rgba(168,85,247,0.15)_40%,_rgba(168,85,247,0.03)_50%,_rgba(168,85,247,0)_100%)] flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  gap-y-14  text-white md:p-12 rounded-full  shadow-2xl shadow-white/5 z-10">
           <div className="text-center">
@@ -34,16 +34,16 @@ export function Header() {
             </div>
           </div>
         </div>
-        <div className="absolute md:-bottom-10 md:left-0 md:-translate-x-0 left-1/2 -translate-x-1/3  -bottom-72 h-auto w-full md:w-auto">
+        <div className="absolute md:-bottom-12 md:left-0 md:-translate-x-0 left-1/2 -translate-x-1/2  -bottom-72 h-auto w-[80vw] md:w-[38vw]">
           <img
             src="./images/ong-tien.png"
             alt=""
-            className=" md:w-[45vw]  h-full "
+            className="  "
           />
           <img
             src="./images/bup.png"
             alt=""
-            className="h-16  md:h-24 absolute z-20 bottom-12 right-32 xl:right-72 xl:bottom-32  animate-bounce-smooth"
+            className="h-16 md:h-24 absolute z-20 bottom-14 right-16 xl:right-52 xl:bottom-28  animate-bounce-smooth"
           />
         </div>
         <img
@@ -52,7 +52,7 @@ export function Header() {
           className=" md:w-full h-[520px] w-auto object-cover md:h-screen"
         />
       </div>
-      <div className="block md:hidden h-64"></div>
+      <div className="block md:hidden h-72"></div>
     </div>
   );
 }

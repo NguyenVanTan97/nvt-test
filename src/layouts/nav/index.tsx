@@ -11,7 +11,9 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrollClass(window.scrollY > 300 ? " shadow-md bg-slate-800/40" : "");
+      setIsScrollClass(
+        window.scrollY > 300 ? " shadow-md bg-slate-800/40" : ""
+      );
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,7 +22,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500  ` + isScrollClass}
+      className={
+        `fixed top-0 left-0 right-0 z-50 transition-all duration-500  ` +
+        isScrollClass
+      }
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between ">
         <div>
@@ -29,17 +34,29 @@ export function Navbar() {
 
         <div className="items-center cursor-pointer hidden md:flex">
           <nav className="text-sm space-x-8 uppercase pr-8 text-white">
-            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
-              {/* {t("about")} */} demo
+            <a
+              href="#about"
+              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+            >
+              {/* {t("about")} */} about
             </a>
-            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
-              {/* {t("game")} */} demo
+            <a
+              href="#game"
+              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+            >
+              {/* {t("game")} */} game
             </a>
-            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
-              {/* {t("partners")} */} demo
+            <a
+              href="#partner"
+              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+            >
+              {/* {t("partners")} */} partners
             </a>
-            <a className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125">
-              {/* {t("contact")} */} demo
+            <a
+              href="#contact"
+              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+            >
+              {/* {t("contact")} */} contact
             </a>
           </nav>
 
@@ -92,26 +109,26 @@ export function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col justify-center items-center font-bold text-sm uppercase">
+          <div className="flex flex-col justify-center items-center font-bold text-sm uppercase" onClick={toggleMenu}>
             <a
-              href="#"
+              href="#about"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
               About us
             </a>
             <a
-              href="#"
+              href="#game"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
               games
             </a>
             <a
-              href="#"
+              href="#partner"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
               partners
             </a>
-            <a href="#" className="block text-gray-700 p-5 w-full text-center">
+            <a href="#contact" className="block text-gray-700 p-5 w-full text-center">
               Contact us
             </a>
           </div>
