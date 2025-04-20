@@ -3,7 +3,9 @@ import LanguageSwitcher from "./dropdownLag";
 import { useTranslation } from "react-i18next";
 
 export function Navbar() {
-  const { t } = useTranslation<"nav">();
+  const { t } = useTranslation("nav") as {
+    t: (key: string) => string;
+  };
   const [isOpen, setIsOpen] = useState(false);
   const [isScrollClass, setIsScrollClass] = useState<string>("");
 
@@ -36,27 +38,27 @@ export function Navbar() {
           <nav className="text-sm space-x-8 uppercase pr-8 text-white">
             <a
               href="#about"
-              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+              className="font-bold hover:text-purple-500 transition-colors duration-300 hover:brightness-125"
             >
-              {/* {t("about")} */} about
+              {t("about")}
             </a>
             <a
               href="#game"
-              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+              className="font-bold hover:text-purple-500 transition-colors duration-300 hover:brightness-125"
             >
-              {/* {t("game")} */} game
+              {t("game")}
             </a>
             <a
               href="#partner"
-              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+              className="font-bold hover:text-purple-500 transition-colors duration-300 hover:brightness-125"
             >
-              {/* {t("partners")} */} partners
+              {t("partners")}
             </a>
             <a
               href="#contact"
-              className="font-bold hover:text-cyan-400 transition-colors duration-300 hover:brightness-125"
+              className="font-bold hover:text-purple-500 transition-colors duration-300 hover:brightness-125"
             >
-              {/* {t("contact")} */} contact
+              {t("contact")}
             </a>
           </nav>
 
@@ -109,27 +111,33 @@ export function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col justify-center items-center font-bold text-sm uppercase" onClick={toggleMenu}>
+          <div
+            className="flex flex-col justify-center items-center font-bold text-sm uppercase"
+            onClick={toggleMenu}
+          >
             <a
               href="#about"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              About us
+              {t("about")}
             </a>
             <a
               href="#game"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              games
+              {t("game")}
             </a>
             <a
               href="#partner"
               className="block text-gray-700 p-5 border-b border-gray-200 w-full text-center"
             >
-              partners
+              {t("partners")}
             </a>
-            <a href="#contact" className="block text-gray-700 p-5 w-full text-center">
-              Contact us
+            <a
+              href="#contact"
+              className="block text-gray-700 p-5 w-full text-center"
+            >
+              {t("contact")}
             </a>
           </div>
         </div>

@@ -5,13 +5,6 @@ declare module "react-i18next" {
   interface CustomTypeOptions {
     returnNull: false;
     defaultNS: typeof defaultNS;
-    resources: {
-      nav: {
-        about: string;
-        game: string;
-        partners: string;
-        contact: string;
-      };
-    };
+    resources: typeof resources["en"]; 
   }
 }

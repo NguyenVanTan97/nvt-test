@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 type CountdownTimerProps = {
   targetDate: Date;
 };
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
+  const { t } = useTranslation("contact") as {
+    t: (key: string) => string;
+  };
   const calculateTimeLeft = () => {
     const difference = targetDate.getTime() - new Date().getTime();
     if (difference <= 0) return null;
@@ -37,10 +41,10 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   }
 
   const timeItems = [
-    { label: "Ngày", value: timeLeft.days },
-    { label: "Giờ", value: timeLeft.hours },
-    { label: "Phút", value: timeLeft.minutes },
-    { label: "Giây", value: timeLeft.seconds },
+    { label: t("day"), value: timeLeft.days },
+    { label: t("hour"), value: timeLeft.hours },
+    { label: t("minute"), value: timeLeft.minutes },
+    { label: t("second"), value: timeLeft.seconds },
   ];
 
   return (

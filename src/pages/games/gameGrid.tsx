@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { GameItem } from ".";
 
 export function GameGridComponent({ games }: { games: GameItem[] }) {
+  const { t } = useTranslation("game") as {
+    t: (key: string) => string;
+  };
   // Chia thành 4 cột cho desktop
   const columnCount = 4;
   const desktopCols = Array.from(
@@ -19,13 +23,10 @@ export function GameGridComponent({ games }: { games: GameItem[] }) {
     <div id="game" className=" px-4 max-w-7xl mx-auto py-14">
       <div className="flex flex-col justify-center items-center pb-10 gap-4 px-6 md:px-32">
         <h1 className="md:text-6xl font-black text-5xl font-playfair">
-          Our Games
+          {t("title")}
         </h1>
         <span className="text-center text-sm text-gray-500">
-          As a pioneer of mobile app gamification, we take pride in originality
-          and individuality, providing global players with state-of-the-art
-          games that feature splendid storylines, sensational sound effects and
-          magnificent animation that never cease to impress.
+          {t("content")}
         </span>
       </div>
       <div className="flex ">

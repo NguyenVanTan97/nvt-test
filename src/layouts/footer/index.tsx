@@ -1,4 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 export function Footer() {
+  const { t } = useTranslation("other") as {
+    t: (key: string) => string;
+  };
   return (
     <footer>
       <div
@@ -25,39 +30,32 @@ export function Footer() {
             </div>
             <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h1 className="font-bold text-2xl">Địa chỉ</h1>
+                <h1 className="font-bold text-2xl">{t("address")}</h1>
                 <div className="flex gap-2 pt-6 text-sm">
                   <img className="h-8" src="./icons/location.png" alt="" />
                   <div className="flex flex-col gap-3">
-                    <span>
-                      Valletta Buildings, South Street, Valletta - VLT 1103
-                      Malta, Mỹ
-                    </span>
-                    <span>
-                      Số 20 đường Phan Đăng Lưu, quận Hải Châu, thành phố Đà
-                      Nẵng, Việt Nam
-                    </span>
+                    <span>{t("dc1")}</span>
+                    <span>{t("dc2")}</span>
                   </div>
                 </div>
                 <div className="flex gap-2 pt-5 text-sm items-center">
                   <img className="h-8" src="./icons/mobile.png" alt="" />
                   <div className="flex flex-col gap-4">
-                    <span>(+1) 555-0108-000 hoặc (+236) 555-0108</span>
+                    <span>{t("phone")}</span>
                   </div>
                 </div>
               </div>
               <div>
-                <h1 className="font-bold text-2xl">Theo dõi</h1>
+                <h1 className="font-bold text-2xl">{t("subscribe")}</h1>
                 <div className="flex gap-2 pt-6 text-sm">
                   <span>
-                    Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết
-                    về các cập nhật của chúng tôi
+                  {t("subscribe-p")}
                   </span>
                 </div>
                 <div className="flex items-center border border-gray-300 rounded-md mt-5">
                   <input
                     type="email"
-                    placeholder="Email"
+                    placeholder={t("placeholder")}
                     className="py-3 px-4 w-full focus:outline-none bg-transparent text-white"
                   />
                   <button className=" text-white rounded-r-md px-5 text-xl">

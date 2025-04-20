@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import i18n from "i18next";
+import { useTranslation } from "react-i18next";
 
 type Language = "en" | "vi";
 
@@ -9,6 +10,9 @@ const LANGUAGES: { code: Language; name: string; flag: string }[] = [
 ];
 
 const LanguageSwitcher = () => {
+  const { t } = useTranslation("nav") as {
+    t: (key: string) => string;
+  };
   const [selected, setSelected] = useState<Language>("en");
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -72,7 +76,7 @@ const LanguageSwitcher = () => {
                   <span className="w-[1.2rem] " />
                 )}
                 <img src={lang.flag} className="h-6 mr-2" />
-                <span>{lang.name}</span>
+                <span>{t(lang.code)}</span>
               </div>
             </button>
           ))}

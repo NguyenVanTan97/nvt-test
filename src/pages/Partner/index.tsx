@@ -3,6 +3,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const partners = [
   { name: "EA Games", logo: "/images/ea.png" },
@@ -15,12 +16,17 @@ const partners = [
 ];
 
 export function PartnerSlider() {
+  const { t } = useTranslation("other") as {
+    t: (key: string) => string;
+  };
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
     <div id="partner" className="bg-[#F6F6F6] py-10 md:py-16 relative">
-      <h2 className="md:text-6xl font-black text-5xl font-playfair text-center mb-6 md:mb-14">Our Partners</h2>
+      <h2 className="md:text-6xl font-black text-5xl font-playfair text-center mb-6 md:mb-14">
+        {t("partner")}
+      </h2>
       <div className="max-w-6xl md:max-w-4xl xl:max-w-6xl mx-4 md:mx-auto px-4 relative">
         <button
           ref={prevRef}
