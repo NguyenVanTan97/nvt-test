@@ -5,16 +5,19 @@ import { About } from "./pages/about";
 import { GameGrid } from "./pages/games";
 import { Contact } from "./pages/contactUs";
 import PartnerSlider from "./pages/partner";
+import { ActionProvider } from "./context";
 
 function App() {
   return (
-    <Layout>
-      <Contact />
-      <About />
-      <GameGrid />
-      <PartnerSlider />
-      <BackToTopButton />
-    </Layout>
+    <ActionProvider>
+      <Layout>
+        <Contact />
+        <About />
+        <GameGrid />
+        <PartnerSlider />
+        <BackToTopButton />
+      </Layout>
+    </ActionProvider>
   );
 }
 

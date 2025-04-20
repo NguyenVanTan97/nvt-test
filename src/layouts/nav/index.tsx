@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import LanguageSwitcher from "./dropdownLag";
 import { useTranslation } from "react-i18next";
+import { useActionProvider } from "../../context";
 
 export function Navbar() {
   const { t } = useTranslation("nav") as {
     t: (key: string) => string;
   };
+  const { setIsOpenNavMobile } = useActionProvider();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrollClass, setIsScrollClass] = useState<string>("");
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    console.log(!isOpen);
+    
+    setIsOpen(!isOpen);
+    setIsOpenNavMobile(!isOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {

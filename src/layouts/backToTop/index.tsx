@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useActionProvider } from "../../context";
 
 const BackToTopButton = () => {
+  const { isOpenNavMobile } = useActionProvider();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -22,7 +24,11 @@ const BackToTopButton = () => {
       className={`
         fixed bottom-6 right-6 z-50 p-3 rounded-full bg-white shadow-lg
         transition-opacity duration-300 ease-in-out
-        ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}
+        ${
+          isVisible && !isOpenNavMobile
+            ? "opacity-100"
+            : "opacity-0 pointer-events-none"
+        }
         hover:bg-gray-100
       `}
       aria-label="Back to top"
