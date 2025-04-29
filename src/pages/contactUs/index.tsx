@@ -43,10 +43,17 @@ export function Contact() {
             className="h-16 md:h-24 absolute z-20 bottom-14 right-16 xl:right-52 xl:bottom-28  animate-bounce-smooth"
           />
         </div>
+        <link
+          rel="preload"
+          as="image"
+          href="./images/BG_header.webp"
+          type="image/webp"
+        />
         <img
-          src="./images/BG_header.png"
-          alt=""
+          src="./images/BG_header.webp"
+          alt="ảnh bìa"
           className=" md:w-full h-[520px] w-auto object-cover md:h-screen"
+          loading="eager"
         />
       </div>
       <div className="block md:hidden h-72"></div>
